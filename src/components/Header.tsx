@@ -91,7 +91,6 @@ function Header() {
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
-          {console.log(selectedMethod)}
         <Table meth={selectedMethod} />
       </IonContent>
       </IonPage>
