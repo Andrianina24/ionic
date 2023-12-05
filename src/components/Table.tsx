@@ -1,7 +1,7 @@
 import AxiosService from "../components/AxiosService";
-import React, { useEffect, useState } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 
-function Table(props) {
+function Table(props: any) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -35,7 +35,7 @@ function Table(props) {
 
         setData(fetchedData);
       } catch (error) {
-        setError(error);
+        setError(error as SetStateAction<null>);
       } finally {
         setLoading(false);
       }
@@ -49,10 +49,10 @@ function Table(props) {
   }
 
   if (error) {
-    return <p>Error: {error.message}</p>;
+    return <p>Error: {(error as { message: string }).message}</p>;
   }
   const renderTableHeaders = () => {
-    if (!data || data.length === 0) return null;
+    if (!data || (data as any[]).length === 0) return null;
 
     const firstItem = data[0];
     return (
@@ -67,12 +67,12 @@ function Table(props) {
   };
 
   const renderTableRows = () => {
-    if (!data || data.length === 0) return null;
+    if (!data || (data as any[]).length === 0) return null;
 
-    return data.map((item, index) => (
+    return (data as any[]).map((item, index) => (
       <tr key={index}>
         {Object.values(item).map((columnValue, i) => (
-          <td key={i}>{columnValue}</td>
+          <td key={i}>{String(columnValue)}</td>
         ))}
       </tr>
     ));

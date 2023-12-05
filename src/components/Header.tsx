@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SetStateAction } from "react";
 import {
   IonButtons,
   IonItem,
@@ -19,8 +19,8 @@ import { useEffect, useState } from "react";
 function Header() {
   const [selectedMethod, setSelectedMethod] = useState("general");
 
-  const handleButtonClick = (method) => {
-    setSelectedMethod(method);
+  const handleButtonClick = (method: String) => {
+    setSelectedMethod(method as SetStateAction<string>);
   };
 
   return (
