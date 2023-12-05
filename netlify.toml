@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"  
-  publish = "build"          
+  command = "npm run build"
+  publish = "build"
 
 [[redirects]]
   from = "/*"
@@ -8,6 +8,5 @@
   status = 200
 
 [headers]
-  # Set headers, for example, to enable CORS
   "/*"
   Access-Control-Allow-Origin = "*"
