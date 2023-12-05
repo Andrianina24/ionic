@@ -80,7 +80,7 @@ function Table(props: any) {
   };
   return (
     <div style={{ overflowX: "auto" }}>
-      <table border={1} >
+      <table border={1} className="tab">
         <tbody>
           {renderTableHeaders()}
           {renderTableRows()}

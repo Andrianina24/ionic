@@ -5,3 +5,9 @@
 .corps{
     padding: 2px;
 }
+
+.tab{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
