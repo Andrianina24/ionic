@@ -17,7 +17,6 @@ const Home: React.FC = () => {
       <IonPage>
         <IonContent fullscreen>
           <Header></Header>
-          {/* <Table meth="general"></Table> */}
         </IonContent>
       </IonPage>
     </div>
