@@ -59,7 +59,7 @@ function Table(props: any) {
       <tr>
         {Object.keys(firstItem).map((columnName, i) => (
           <th key={i}>
-            <strong>{columnName}</strong>
+            <p><strong>{columnName}</strong></p>
           </th>
         ))}
       </tr>
@@ -72,7 +72,7 @@ function Table(props: any) {
     return (data as any[]).map((item, index) => (
       <tr key={index}>
         {Object.values(item).map((columnValue, i) => (
-          <td key={i}>{String(columnValue)}</td>
+          <td key={i}><p>{String(columnValue)}</p></td>
         ))}
       </tr>
     ));
