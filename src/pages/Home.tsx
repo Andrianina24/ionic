@@ -7,7 +7,6 @@ import {
 } from "@ionic/react";
 import AxiosService from "../components/AxiosService";
 import Header from "../components/Header";
-import Table from "../components/Table";
 import "./Home.css";
 import React, { useEffect, useState } from "react";
 
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <div className="all">
       <IonPage>
-        <IonContent fullscreen>
+        <IonContent >
           <Header></Header>
         </IonContent>
       </IonPage>
