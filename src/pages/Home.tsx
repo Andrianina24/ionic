@@ -8,7 +8,7 @@ import {
 import AxiosService from "../components/AxiosService";
 import Header from "../components/Header";
 import Table from "../components/Table";
-// import "./Home.css";
+import "./Home.css";
 import React, { useEffect, useState } from "react";
 
 const Home: React.FC = () => {

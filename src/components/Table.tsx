@@ -1,5 +1,6 @@
 import AxiosService from "../components/AxiosService";
 import React, { SetStateAction, useEffect, useState } from "react";
+import "./Table.css";
 
 function Table(props: any) {
   const [data, setData] = useState(null);
@@ -58,7 +59,7 @@ function Table(props: any) {
     return (
       <tr>
         {Object.keys(firstItem).map((columnName, i) => (
-          <th key={i}>
+          <th key={i} className="tete">
             <p><strong>{columnName}</strong></p>
           </th>
         ))}
@@ -70,7 +71,7 @@ function Table(props: any) {
     if (!data || (data as any[]).length === 0) return null;
 
     return (data as any[]).map((item, index) => (
-      <tr key={index}>
+      <tr key={index} className="corps">
         {Object.values(item).map((columnValue, i) => (
           <td key={i}><p>{String(columnValue)}</p></td>
         ))}
@@ -79,7 +80,7 @@ function Table(props: any) {
   };
   return (
     <div style={{ overflowX: "auto" }}>
-      <table border={1}>
+      <table border={1} >
         <tbody>
           {renderTableHeaders()}
           {renderTableRows()}

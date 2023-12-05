@@ -16,6 +16,8 @@ import {
 } from "@ionic/react";
 import Table from "./Table";
 import { useEffect, useState } from "react";
+import "./Header.css";
+
 function Header() {
   const [selectedMethod, setSelectedMethod] = useState("general");
 
