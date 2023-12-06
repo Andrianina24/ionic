@@ -93,7 +93,7 @@ function Header() {
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
-        <Table meth={selectedMethod} />
+        {/* <Table meth={selectedMethod} /> */}
       </IonContent>
       </IonPage>
     </>
